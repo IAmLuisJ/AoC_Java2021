@@ -24,10 +24,8 @@ public class Day10 {
         points.put(">", 25137);
 
         //read in the input
-//      File input = new File("/Users/luisjuarez/GitHub/AOC_Java/data/day10/input.txt");
-        File input = new File("/Users/luisjuarez/GitHub/AOC_Java/data/day10/input.txt");
+        File input = new File("/Users/luisjuarez/GitHub/AOC_Java/data/day10/testdata.txt");
         Scanner scanner = new Scanner(input);
-
 
         while(scanner.hasNextLine()) {
             Stack<String> stack = new Stack<>();
@@ -42,8 +40,8 @@ public class Day10 {
                 if(bracketPairs.containsKey(character)) {
                     stack.push(character);
                 } else {
-                    String closing = stack.pop();
-                    if(!bracketPairs.get(closing).equals(character)) {
+                    String opening = stack.pop();
+                    if(!bracketPairs.get(opening).equals(character)) {
                         int score = points.get(character);
                         totalScore += score;
                     };
