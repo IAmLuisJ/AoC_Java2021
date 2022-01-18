@@ -3,7 +3,7 @@ package com.iAmLuisJ;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        var newObject = new Day10();
+        // write your code here
+
     }
 }
