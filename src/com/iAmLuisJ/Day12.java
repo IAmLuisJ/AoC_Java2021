@@ -18,7 +18,7 @@ public class Day12 {
     static public void main(String[] args) throws FileNotFoundException {
         File input = new File("/Users/luisjuarez/GitHub/AOC_Java/data/Day12/input.txt");
         Scanner scanner = new Scanner(input);
-        HashMap<String, String> caves = new HashMap();
+        HashMap<String, String> caves = new HashMap<>();
 
         // parse list into caves
         while (scanner.hasNextLine()) {

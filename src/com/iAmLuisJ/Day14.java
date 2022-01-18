@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Day14 {
     public static void main(String[] args) throws FileNotFoundException {
-        File input = new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\day14\\testdata.txt");
+        File input = new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\day14\\input.txt");
         Scanner scanner = new Scanner(input);
         Map<String, String[]> instructions = new HashMap<>();
         HashMap<String, Long> polymer = new HashMap<>();
@@ -35,7 +35,7 @@ public class Day14 {
         }
 
         // loop through instructions
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 40; i++) {
             polymer = doInsert(polymer, instructions);
         }
         // count frequency of characters
@@ -78,8 +78,8 @@ public class Day14 {
 
             if (instructions.containsKey(key)) {
                 var insertions = instructions.get(key);
-                long firstPairFrequency = polymer.getOrDefault(insertions[0], 0L);
-                long secondPairFrequency = polymer.getOrDefault(insertions[1], 0L);
+                long firstPairFrequency = updatedPolymer.getOrDefault(insertions[0], 0L);
+                long secondPairFrequency = updatedPolymer.getOrDefault(insertions[1], 0L);
                 updatedPolymer.put(insertions[0], firstPairFrequency + countKey);
                 updatedPolymer.put(insertions[1], secondPairFrequency + countKey);
             } else {

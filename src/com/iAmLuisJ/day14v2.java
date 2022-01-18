@@ -1,4 +1,5 @@
 package com.iAmLuisJ;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -8,9 +9,9 @@ public class day14v2 {
     private static Character first;
 
     public static void main(String[] args) {
-        String path = "/Users/luisjuarez/GitHub/AOC_Java/data/day14/testdata.txt";
+        String path = "C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\day14\\testdata.txt";
         Map<String, Long> templateMap = loadInput(path);
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 1; i++) {
             templateMap = transform(templateMap);
         }
 
@@ -57,7 +58,7 @@ public class day14v2 {
     private static void createInsertions(String[] line) {
         String pattern = line[0];
         String plus = line[1];
-        String[] replace = {pattern.charAt(0) + plus, plus  + pattern.charAt(1)};
+        String[] replace = { pattern.charAt(0) + plus, plus + pattern.charAt(1) };
         insertions.put(pattern, replace);
     }
 
