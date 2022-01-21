@@ -1,5 +1,6 @@
 package com.iAmLuisJ;
 
+import com.iAmLuisJ.utilityClasses.Coordinate;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -35,12 +36,49 @@ public class Day13 {
         scanner.close();
         // write methods to transform the grid
 
+        // print grid before instructions
+        printGrid(coords);
         // loop through instructions
         for (String fold : instructions) {
             String axis = fold.substring(11, 12);
             String axisVal = fold.substring(13);
+
+            // print grid to see fold
+            printGrid(coords);
             // execute folds
+
+            System.out.println(" ");
+        }
+        System.out.println("Final answer");
+        printGrid(coords);
+
+    }
+
+    static void printGrid(ArrayList<Coordinate> grid) {
+        // get the highest x and y values
+        var maxX = 0;
+        var maxY = 0;
+        for (Coordinate coordinate : grid) {
+            if (coordinate.getX() > maxX) {
+                maxX = coordinate.getX();
+            }
+            if (coordinate.getY() > maxY) {
+                maxY = coordinate.getY();
+            }
         }
 
+        for (int i = 0; i < maxX; i++) {
+            for (int j = 0; j < maxY; j++) {
+                // print either a . or a #
+                Coordinate newCord = new Coordinate(i, j);
+                if (grid.contains(newCord)) {
+                    System.out.print("#");
+                } else {
+                    System.out.print(".");
+                }
+
+            }
+            System.out.println("|");
+        }
     }
 }

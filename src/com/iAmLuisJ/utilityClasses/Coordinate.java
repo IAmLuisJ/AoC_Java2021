@@ -1,4 +1,4 @@
-package com.iAmLuisJ;
+package com.iAmLuisJ.utilityClasses;
 
 public class Coordinate {
     private int x;
@@ -28,5 +28,14 @@ public class Coordinate {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public boolean equals(Coordinate compareCord) {
+        if (this == compareCord)
+            return true;
+        if (compareCord.getX() == this.x && compareCord.getY() == this.y) {
+            return true;
+        }
+        return false;
     }
 }
