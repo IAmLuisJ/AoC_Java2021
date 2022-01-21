@@ -8,7 +8,7 @@ import java.util.*;
 public class Day13 {
 
     public static void main(String[] args) throws FileNotFoundException {
-        File input = new File("C:\\Users\\a1016060\\GitHub\\AoC 2021\\aoc\\src\\Day13test.txt");
+        File input = new File("/Users/luisjuarez/GitHub/AOC_Java/data/day13/input.txt");
         Scanner scanner = new Scanner(input);
         ArrayList<Coordinate> coords = new ArrayList<>();
         ArrayList<String> instructions = new ArrayList<>();
@@ -42,11 +42,37 @@ public class Day13 {
         for (String fold : instructions) {
             String axis = fold.substring(11, 12);
             String axisVal = fold.substring(13);
+            int foldVal = Integer.parseInt(axisVal);
+            // execute folds
+            //for an x fold, the formula should be new xval = xval - (foldX *2)
+            if(axis.equals("x")) {
+                for(Coordinate dot : coords) {
+                    var x = dot.getX();
+                    if(x > foldVal) {
+                        var distanceX = (x - foldVal) * 2;
+                        var newX = x - distanceX;
+                        if(newX > -1) {
+                            dot.setX(newX);
+                        }
+                    }
+                }
+            }
+            if(axis.equals("y")) {
+                for(Coordinate dot : coords) {
+                    var y = dot.getY();
+                    if(y > foldVal) {
+                        var distanceY = (y - foldVal) * 2;
+                        var newY = y - distanceY;
+                        if(newY > -1) {
+                            dot.setY(newY);
+                        }
+                    }
+                }
+            }
 
+            System.out.println(fold);
             // print grid to see fold
             printGrid(coords);
-            // execute folds
-
             System.out.println(" ");
         }
         System.out.println("Final answer");
@@ -55,6 +81,9 @@ public class Day13 {
     }
 
     static void printGrid(ArrayList<Coordinate> grid) {
+        int dotCount = 0;
+
+        System.out.println("Start of Grid");
         // get the highest x and y values
         var maxX = 0;
         var maxY = 0;
@@ -67,18 +96,20 @@ public class Day13 {
             }
         }
 
-        for (int i = 0; i < maxX; i++) {
-            for (int j = 0; j < maxY; j++) {
+        for (int i = 0; i < maxY +1; i++) {
+            for (int j = 0; j < maxX+1; j++) {
                 // print either a . or a #
-                Coordinate newCord = new Coordinate(i, j);
+                Coordinate newCord = new Coordinate(j, i);
                 if (grid.contains(newCord)) {
                     System.out.print("#");
+                    dotCount++;
                 } else {
                     System.out.print(".");
                 }
-
             }
             System.out.println("|");
         }
+        System.out.println("End of Grid");
+        System.out.println("Dot count is " + dotCount);
     }
 }

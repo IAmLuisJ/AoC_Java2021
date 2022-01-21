@@ -38,4 +38,14 @@ public class Coordinate {
         }
         return false;
     }
+
+    public boolean equals(Object compareCord) {
+        if (this == compareCord)
+            return true;
+        Coordinate thisCord = (Coordinate) compareCord;
+        if (thisCord.getX() == this.x && thisCord.getY() == this.y) {
+            return true;
+        }
+        return false;
+    }
 }

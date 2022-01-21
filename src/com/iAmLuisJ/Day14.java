@@ -6,7 +6,8 @@ import java.util.*;
 
 public class Day14 {
     public static void main(String[] args) throws FileNotFoundException {
-        File input = new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\day14\\input.txt");
+       // File input = new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\day14\\input.txt");
+        File input = new File("/Users/luisjuarez/GitHub/AOC_Java/data/day14/input.txt");
         Scanner scanner = new Scanner(input);
         Map<String, String[]> instructions = new HashMap<>();
         HashMap<String, Long> polymer = new HashMap<>();
