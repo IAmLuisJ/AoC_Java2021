@@ -1,3 +1,5 @@
+package com.iAmLuisJ;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,19 +9,21 @@ import java.util.Scanner;
  * @link https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
  */
 
-public class Day15 extends Day {
+public class Day15v2 {
 
 	int[][] riskMap;
 
-	public Day15() {
+	public Day15v2() {
 		Scanner reader = null;
 		try {
-			reader = new Scanner(new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\Day15\\testdata.txt"));
+			reader = new Scanner(new File("/Users/luisjuarez/GitHub/AOC_Java/data/Day15/input.txt"));
 		} catch (Exception e) {
 			System.out.println("file not found");
 		}
 		ArrayList<String> input = new ArrayList<String>();
-		while (reader.hasNext()) {
+		while (true) {
+			assert reader != null;
+			if (!reader.hasNext()) break;
 			input.add(reader.nextLine());
 		}
 		reader.close();
