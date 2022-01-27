@@ -14,7 +14,7 @@ public class Day15 extends Day {
 	public Day15() {
 		Scanner reader = null;
 		try {
-			reader = new Scanner(new File("res/day15_input"));
+			reader = new Scanner(new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\Day15\\testdata.txt"));
 		} catch (Exception e) {
 			System.out.println("file not found");
 		}

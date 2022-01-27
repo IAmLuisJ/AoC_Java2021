@@ -89,5 +89,41 @@ public class junk {
 
         // exceptions, use a try/catch or throw an exception type
         // throw new Exception("Error");
+
+        // Brute force / manual way
+        ArrayList<String> row = new ArrayList<>();
+        row.add("1");
+        row.add("2");
+        row.add("3");
+        row.add("4");
+        row.add("5");
+        ArrayList<String> row2 = new ArrayList<>();
+        row2.add("6");
+        row2.add("7");
+        row2.add("8");
+        row2.add("9");
+        row2.add("1");
+        ArrayList<ArrayList<String>> board = new ArrayList<>();
+        board.add(row);
+        board.add(row2);
+
+        // looks like this
+
+        // 1 2 3 4 5
+        // 6 7 8 9 1
+
+        // programatic way
+        ArrayList<ArrayList<String>> board2 = new ArrayList<>();
+        for (int y = 0; y < 2; y++) {
+            ArrayList<String> xRow = new ArrayList<>();
+            for (int x = 0; x < 5; x++) {
+                xRow.add("[" + x + "," + +y + "]");
+            }
+            board2.add(xRow);
+        }
+
+        // board2
+        // [0,0] [1,0] [2,0] [3, 0] [4,0]
+        // [0,1] [1,1] [2,1] [3,1] [4,1]
     }
 }
