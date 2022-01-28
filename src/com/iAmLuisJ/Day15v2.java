@@ -16,14 +16,15 @@ public class Day15v2 {
 	public Day15v2() {
 		Scanner reader = null;
 		try {
-			reader = new Scanner(new File("/Users/luisjuarez/GitHub/AOC_Java/data/Day15/input.txt"));
+			reader = new Scanner(new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\Day15\\input.txt"));
 		} catch (Exception e) {
 			System.out.println("file not found");
 		}
 		ArrayList<String> input = new ArrayList<String>();
 		while (true) {
 			assert reader != null;
-			if (!reader.hasNext()) break;
+			if (!reader.hasNext())
+				break;
 			input.add(reader.nextLine());
 		}
 		reader.close();

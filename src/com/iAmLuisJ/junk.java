@@ -88,7 +88,7 @@ public class junk {
         // hasNext() method
         while (myIterator.hasNext()) {
             // loops through collection, with myIterator being replaced by each index
-            myIterator.remove();
+            // myIterator.remove();
         }
 
         // exceptions, use a try/catch or throw an exception type
