@@ -130,4 +130,26 @@ public class junk {
         // [0,0] [1,0] [2,0] [3, 0] [4,0]
         // [0,1] [1,1] [2,1] [3,1] [4,1]
     }
+
+    public class magicNumber {
+        int val;
+        int overFlowCount;
+
+        public magicNumber(int number) {
+            this.val = number;
+        }
+
+        public void add(int number) {
+            if (val > Integer.MAX_VALUE) {
+                overFlowCount++;
+            }
+        }
+
+        public int getValue() {
+            if (overFlowCount == 0) {
+                return val;
+            }
+            return val + (overFlowCount * Integer.MAX_VALUE);
+        }
+    }
 }
