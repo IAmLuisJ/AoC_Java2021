@@ -8,7 +8,6 @@ import com.iAmLuisJ.utilityClasses.ALU;
 public class Day24 {
     public static void main(String[] args) throws FileNotFoundException {
 
-        boolean canOptimize = true;
         long testNum = 11111111111111L;
         String testNumber = String.valueOf(testNum);
         long highestNum = 0L;
