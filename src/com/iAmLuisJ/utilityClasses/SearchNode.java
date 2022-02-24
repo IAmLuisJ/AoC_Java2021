@@ -16,4 +16,16 @@ public class SearchNode {
         this.y = y;
         this.riskSum = Integer.MAX_VALUE;
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getRiskSum() {
+        return riskSum;
+    }
 }
