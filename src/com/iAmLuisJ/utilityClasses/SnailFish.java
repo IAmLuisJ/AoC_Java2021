@@ -8,7 +8,7 @@ public class SnailFish {
     SnailFish right;
 
     public SnailFish(String snail) {
-
+        snail.startsWith("[");
         parent = null;
         left = null;
         right = null;
