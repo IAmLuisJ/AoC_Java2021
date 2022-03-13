@@ -6,9 +6,6 @@ public class junk {
 
     public static void main(String[] args) {
 
-        var day = new Day15v2();
-        day.part1();
-        day.part2();
         // primitive data types
         int myNumber = 5; // creating an initailizing an int
 
