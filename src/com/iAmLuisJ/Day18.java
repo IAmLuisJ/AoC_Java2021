@@ -9,7 +9,7 @@ public class Day18 {
     public static void main(String[] args) throws FileNotFoundException {
         // SnailFish Math
         // get input
-        File myFile = new File("C:\\Users\\a1016060\\GitHub\\AoC_Java\\data\\Day18\\testdata.txt");
+        File myFile = new File("/Users/luisjuarez/GitHub/AOC_Java/data/Day18/testdata.txt");
         Scanner myScan = new Scanner(myFile);
         ArrayList<String> homework = new ArrayList<>();
 
@@ -21,7 +21,7 @@ public class Day18 {
         // [[[0,[5,8]],[[1,7],[9,6]]],[[4,[1,2]],[[1,4],2]]]
         System.out.println(homework.get(0));
         // further parse the snailfish numbers?
-        var commaSplit = homework.get(0).split("\\[\\]");
+        var commaSplit = homework.get(0).split("\\[");
         System.out.println(commaSplit);
         // Do math
 
