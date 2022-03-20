@@ -1,6 +1,7 @@
 package com.iAmLuisJ.utilityClasses;
 
 public class SnailFish {
+    //length
     int x;
     int y;
     SnailFish parent;
@@ -9,10 +10,16 @@ public class SnailFish {
 
     public SnailFish(String snail) {
         snail.startsWith("[");
+        //endsWith
+        //string.charAt[length]
         parent = null;
         left = null;
         right = null;
     }
+
+    //method parse
+    //returns object
+    //
 
     public void setX(int left) {
         this.x = left;
