@@ -17,10 +17,6 @@ public class SnailFish {
         right = null;
     }
 
-    //method parse
-    //returns object
-    //
-
     public void setX(int left) {
         this.x = left;
     }

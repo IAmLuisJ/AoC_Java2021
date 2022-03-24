@@ -21,6 +21,8 @@ public class Day18 {
         System.out.println("parsed");
         // [[[0,[5,8]],[[1,7],[9,6]]],[[4,[1,2]],[[1,4],2]]]
         System.out.println(homework.get(0));
+        //calling parseFish Method
+        parseFish(homework.get(0));
         // further parse the snailfish numbers?
         var commaSplit = homework.get(0).split("\\[");
         System.out.println(commaSplit);
@@ -37,5 +39,17 @@ public class Day18 {
         // The magnitude of a pair is 3 times the magnitude of its left element plus 2
         // times the magnitude of its right element. The magnitude of a regular number
         // is just that number.
+    }
+
+    public static void parseFish(String line) {
+        //method parse
+        //takes in a line of snailfish, creates a snailfish, then recursively checks if the child is a pair or a number,
+        //if its a number, end loop
+        //if its a pair, parse again
+
+
+
+        //returns object
+
     }
 }
